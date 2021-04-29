@@ -82,7 +82,7 @@ module.exports = function (item) {
     manifest.remoteVersionUrl = `${item.hotUpdateUrl}/version.manifest`;
     manifest.version = item.proVer != null ? item.proVer : manifest.version;
     manifest.env = item.proEnv;
-    manifest.buildTime = dayjs().format('YYYY-MM-DD HH:mm:ss');
+    manifest.buildTime = item.dayjs().format('YYYY-MM-DD HH:mm:ss');
 
     // 修改(生成)项目内的 manifest
     let srcPath = path.join(src, 'src');
