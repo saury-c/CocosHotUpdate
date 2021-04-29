@@ -82,6 +82,7 @@ module.exports = function (item) {
     manifest.remoteVersionUrl = `${item.hotUpdateUrl}/version.manifest`;
     manifest.version = item.proVer != null ? item.proVer : manifest.version;
     manifest.env = item.proEnv;
+    manifest.buildTime = dayjs().format('YYYY-MM-DD HH:mm:ss');
 
     // 修改(生成)项目内的 manifest
     let srcPath = path.join(src, 'src');
@@ -100,7 +101,6 @@ module.exports = function (item) {
     // 赋值到一个文件夹下
     let remoteAssetsPath = path.join(__dirname, `../../build/jsb-remote-assets`);
     fse.emptyDirSync(remoteAssetsPath); // 清空文件夹
-    // remoteAssetsPath = path.join(__dirname, `../../build/jsb-remote-assets/${item.proEnv}-${item.dayjs().format('YYYY年MM月DD日HH时mm分ss秒')}`);
     remoteAssetsPath = path.join(__dirname, `../../build/jsb-remote-assets`);
     fse.copySync(srcPath, `${remoteAssetsPath}/src`)
     fse.copySync(resPath, `${remoteAssetsPath}/assets`)
