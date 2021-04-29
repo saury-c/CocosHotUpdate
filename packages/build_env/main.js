@@ -70,32 +70,6 @@ function onBuildStart(options, callback) {
 function onBuilding(options, callback) {
     Editor.log("build - building", dayjs().format('YYYY-MM-DD HH:mm:ss'), options);
 
-    // 这里修改热更id
-    // const mainJsPath = path.join(options.dest, 'main.js');  // 获取发布目录下的 main.js 所在路径
-    // let script = fs.readFileSync(mainJsPath, 'utf8');     // 读取构建好的 main.js
-    // script += '\n' + 'window.myID = "01234567";';         // 添加一点脚本到
-    // fs.writeFileSync(mainJsPath, script);                 // 保存 main.js
-
-    // Editor.log(options.dest, 99999)
-    // var projectJsPath = path.join(options.dest, './src/project.js');  // 获取发布目录下的 project.js 所在路径
-    // var project = fs.readFileSync(projectJsPath, 'utf8');     // 读取构建好的 project.js
-    // var projectArr = project.split('Global.currentModel = ');
-    // Editor.log(typeof projectArr[1]);
-    // var idx1 = projectArr[1].indexOf('.');
-    // var idx2 = projectArr[1].indexOf(',');
-    // var str1 = projectArr[1].slice(idx1 + 1, idx2);
-    // var str2 = currentEnum[currentModelStr];
-    // Editor.log(str1, str2, '--------------str2', currentModelStr);
-    // projectArr[1] = projectArr[1].replace(str1, str2);
-    // project = projectArr.join('Global.currentModel = ');
-    // fs.writeFileSync(projectJsPath, project);
-    // var mainJsPath = path.join(options.dest, './main.js');  // 获取发布目录下的 main.js 所在路径
-    // var mainText = fs.readFileSync(mainJsPath, 'utf8');     // 读取构建好的 main.js 
-    // let rep = new RegExp(`var newVersion = '',newEnv = '';`);
-    // let arr1 = mainText.match(rep);
-    // mainText = mainText.replace(arr1[0], `var newVersion = '${versionStr}',newEnv = '${currentModelStr}';`);    // 用来比较热更key
-    // fs.writeFileSync(mainJsPath, mainText);
-
     // everything is ok
     callback();
 }
