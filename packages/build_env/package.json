@@ -1,0 +1,7 @@
+{
+  "name": "build_env",
+  "version": "0.0.1",
+  "description": "构建工具, 主要用来区分测试环境和正式环境, 修改热更manifest文件",
+  "author": "saury_c",
+  "main": "main.js"
+}
