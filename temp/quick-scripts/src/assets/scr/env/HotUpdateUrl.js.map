@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets\\scr\\env\\HotUpdateUrl.js"],"names":["module","exports"],"mappings":";;;;;;AAAA;AACA;AACA;AACA;AACA;AACA;AAEAA,MAAM,CAACC,OAAP,GAAiB,MAAjB","sourceRoot":"/","sourcesContent":["/*\r\n * @Author: saury_c@foxmail.com\r\n * @Date: 2021-04-29 11:24:06\r\n * @Des: 热更url - 插件包导 ts 代码有问题, 暂时用 js 来写\r\n * @Tips: \r\n */\r\n\r\nmodule.exports = \"8081\";"]}

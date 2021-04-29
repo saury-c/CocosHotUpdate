@@ -5,4 +5,4 @@
  * @Tips: 
  */
 
-module.exports = "8081";
+module.exports = "http://192.168.1.180:8001/";
