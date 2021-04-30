@@ -14,7 +14,7 @@ export const E_ENV_CONFIG: {
     DEV: "DEV",    // 开发者自己打的包
     TEST: "TEST",  // 打给测试的包
     PROD: "PROD",  // 正式包
-} = require("./HotUpdateUrl").E_ENV_CONFIG;
+} = require("./HotUpdateUrl").EnvConfig;
 
 
 /** (热更使用)各环境的版本号, 打包时会自己修改 - 这个使用枚举的变量, 放在最顶部!!! 用于正则匹配第一项 */

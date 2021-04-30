@@ -2,15 +2,15 @@ window.__require = function t(e, s, a) {
 function o(i, r) {
 if (!s[i]) {
 if (!e[i]) {
-var c = i.split("/");
-c = c[c.length - 1];
-if (!e[c]) {
-var l = "function" == typeof __require && __require;
-if (!r && l) return l(c, !0);
-if (n) return n(c, !0);
+var l = i.split("/");
+l = l[l.length - 1];
+if (!e[l]) {
+var c = "function" == typeof __require && __require;
+if (!r && c) return c(l, !0);
+if (n) return n(l, !0);
 throw new Error("Cannot find module '" + i + "'");
 }
-i = c;
+i = l;
 }
 var _ = s[i] = {
 exports: {}
@@ -27,27 +27,24 @@ return o;
 BuildConfig: [ function(t, e, s) {
 "use strict";
 cc._RF.push(e, "9ace4rbQzBGA6IvUKU9cbUm", "BuildConfig");
-var a, o, n, i;
+var a, o, n;
 Object.defineProperty(s, "__esModule", {
 value: !0
 });
-s.GAME_JUMP_TO_URL = s.ENV_URL = s.PROJECT_VER = s.E_ENV_CONFIG = s.PROJECT_ENV = void 0;
-s.PROJECT_ENV = "DEV";
-(function(t) {
-t.DEV = "DEV";
-t.TEST = "TEST";
-t.PROD = "PROD";
-})(i = s.E_ENV_CONFIG || (s.E_ENV_CONFIG = {}));
-s.PROJECT_VER = ((a = {})[i.DEV] = "1.2.0", a[i.TEST] = "1.1.1", a[i.PROD] = "1.0.0", 
-a);
-var r = ((o = {})[i.DEV] = "http://192.168.1.180:8001", o[i.TEST] = "http://192.168.1.180:8001", 
-o[i.PROD] = "http://192.168.1.180:8001", o), c = ((n = {})[i.DEV] = "https://192.168.1.180:8001/", 
-n[i.TEST] = "https://192.168.1.180:8001/", n[i.PROD] = "https://192.168.1.180:8001/", 
+s.GAME_JUMP_TO_URL = s.ENV_URL = s.PROJECT_ENV = s.E_ENV_CONFIG = void 0;
+s.E_ENV_CONFIG = t("./HotUpdateUrl").EnvConfig;
+(a = {})[s.E_ENV_CONFIG.DEV] = "1.2.1", a[s.E_ENV_CONFIG.TEST] = "1.1.1", a[s.E_ENV_CONFIG.PROD] = "1.0.0";
+var i = ((o = {})[s.E_ENV_CONFIG.DEV] = "http://192.168.1.180:8001", o[s.E_ENV_CONFIG.TEST] = "http://192.168.1.180:8001", 
+o[s.E_ENV_CONFIG.PROD] = "http://192.168.1.180:8001", o), r = ((n = {})[s.E_ENV_CONFIG.DEV] = "https://192.168.1.180:8001/", 
+n[s.E_ENV_CONFIG.TEST] = "https://192.168.1.180:8001/", n[s.E_ENV_CONFIG.PROD] = "https://192.168.1.180:8001/", 
 n);
-s.ENV_URL = r.DEV;
-s.GAME_JUMP_TO_URL = c.DEV;
+s.PROJECT_ENV = "DEV";
+s.ENV_URL = i.DEV;
+s.GAME_JUMP_TO_URL = r.DEV;
 cc._RF.pop();
-}, {} ],
+}, {
+"./HotUpdateUrl": "HotUpdateUrl"
+} ],
 HotUpdateUrl: [ function(t, e) {
 "use strict";
 cc._RF.push(e, "765f7/GVMNAQqX7zySu9ZcY", "HotUpdateUrl");
@@ -58,8 +55,8 @@ t[t.TEST = "TEST"] = "TEST";
 t[t.PROD = "PROD"] = "PROD";
 })(s || (s = {}));
 e.exports = {
-HotUpdateUrl: "http://192.168.1.180:8001",
-E_ENV_CONFIG: s
+EnvConfig: s,
+HotUpdateUrl: "http://192.168.1.180:8001"
 };
 cc._RF.pop();
 }, {} ],
@@ -88,7 +85,7 @@ return n > 3 && i && Object.defineProperty(e, s, i), i;
 Object.defineProperty(s, "__esModule", {
 value: !0
 });
-var i = cc._decorator, r = i.ccclass, c = i.property, l = i.executeInEditMode, _ = function(t) {
+var i = cc._decorator, r = i.ccclass, l = i.property, c = i.executeInEditMode, _ = function(t) {
 o(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
@@ -263,8 +260,8 @@ console.log("Retry failed Assets...");
 this._am.downloadFailedAssets();
 }
 };
-n([ c(cc.Asset) ], e.prototype, "manifestUrl", void 0);
-return n([ r, l ], e);
+n([ l(cc.Asset) ], e.prototype, "manifestUrl", void 0);
+return n([ r, c ], e);
 }(cc.Component);
 s.default = _;
 cc._RF.pop();
