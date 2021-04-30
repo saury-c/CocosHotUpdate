@@ -10,8 +10,6 @@
 
 - [构建扩展包: ./packages/build_env](./packages/build_env)
 
-- [上传资源模板: ./upOss](./upOss)
-
 
 <br>
 
