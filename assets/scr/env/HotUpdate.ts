@@ -11,7 +11,7 @@ const { ccclass, property, executeInEditMode } = cc._decorator;
 @executeInEditMode //该脚本可以在编辑器中执行(有生命周期的)
 export default class HotUpdate extends cc.Component {
 
-    @property(cc.Asset)
+    @property({ type: cc.Asset })
     manifestUrl: cc.Asset = null;           // 热更比较文件
 
     private versionCompareHandle = null;    // 版本比较函数
@@ -82,7 +82,7 @@ export default class HotUpdate extends cc.Component {
         this.entrance();
     }
 
-    
+
     onDestroy() {
         if (this._updateListener) {
             this._am.setEventCallback(null);
