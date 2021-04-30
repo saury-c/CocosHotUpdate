@@ -19,9 +19,9 @@
 
 - 热更地址相关
 
-    - 在 [HotUpdateUrl](assets\scr\env\HotUpdateUrl.js) 内修改 热更/资源地址`(HotUpdateUrl)` ， 如果热更地址和资源上传地址想分开使用， 请自行修改脚本(建议新增变量来控制)
+    - 在 [HotUpdateUrl](assets/scr/env/HotUpdateUrl.js) 内修改 热更/资源地址`(HotUpdateUrl)` ， 如果热更地址和资源上传地址想分开使用， 请自行修改脚本(建议新增变量来控制)
 
-    - 当前脚本路径引用为 `assets\scr\env`， 如果不对， 请自行修改， 这个非常重要！！！
+    - 当前脚本路径引用为 `assets/scr/env`， 如果不对， 请自行修改， 这个非常重要！！！
 
 <br>
 
