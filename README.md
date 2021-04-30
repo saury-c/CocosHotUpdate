@@ -57,7 +57,7 @@
 
 > 2 重新构建 （因为 manifest 修改了， 项目的资源需要重新构建来引用这个新的 manifest)
 
-> tips:  这里可以插一个上传资源的步骤， 所有资源放在了 build\jsb-remote-assets
+> tips:  这里可以插一个上传资源的步骤， 所有资源放在了 build/jsb-remote-assets
 
 > 3 运行项目会自己调用热更 - 如果需要控制热更流程， 请自行修改 `HotUpdate.ts` 脚本
 
