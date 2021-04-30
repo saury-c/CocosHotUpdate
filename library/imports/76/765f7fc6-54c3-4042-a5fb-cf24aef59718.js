@@ -10,6 +10,18 @@ cc._RF.push(module, '765f7/GVMNAQqX7zySu9ZcY', 'HotUpdateUrl');
  * @Des: 热更url - 插件包导 ts 代码有问题, 暂时用 js 来写
  * @Tips: 
  */
-module.exports = "http://192.168.1.180:8001/";
+var E_ENV_CONFIG;
+
+(function (temp) {
+  temp[temp["DEV"] = "DEV"] = "DEV";
+  temp[temp["TEST"] = "TEST"] = "TEST";
+  temp[temp["PROD"] = "PROD"] = "PROD";
+})(E_ENV_CONFIG || (E_ENV_CONFIG = {}));
+
+var HotUpdateUrl = "http://192.168.1.180:8001";
+module.exports = {
+  HotUpdateUrl: HotUpdateUrl,
+  E_ENV_CONFIG: E_ENV_CONFIG
+};
 
 cc._RF.pop();

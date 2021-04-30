@@ -38,7 +38,7 @@ t.DEV = "DEV";
 t.TEST = "TEST";
 t.PROD = "PROD";
 })(i = s.E_ENV_CONFIG || (s.E_ENV_CONFIG = {}));
-s.PROJECT_VER = ((a = {})[i.DEV] = "1.0.2", a[i.TEST] = "1.1.1", a[i.PROD] = "1.0.0", 
+s.PROJECT_VER = ((a = {})[i.DEV] = "1.2.0", a[i.TEST] = "1.1.1", a[i.PROD] = "1.0.0", 
 a);
 var r = ((o = {})[i.DEV] = "http://192.168.1.180:8001", o[i.TEST] = "http://192.168.1.180:8001", 
 o[i.PROD] = "http://192.168.1.180:8001", o), c = ((n = {})[i.DEV] = "https://192.168.1.180:8001/", 
@@ -51,7 +51,16 @@ cc._RF.pop();
 HotUpdateUrl: [ function(t, e) {
 "use strict";
 cc._RF.push(e, "765f7/GVMNAQqX7zySu9ZcY", "HotUpdateUrl");
-e.exports = "http://192.168.1.180:8001/";
+var s;
+(function(t) {
+t[t.DEV = "DEV"] = "DEV";
+t[t.TEST = "TEST"] = "TEST";
+t[t.PROD = "PROD"] = "PROD";
+})(s || (s = {}));
+e.exports = {
+HotUpdateUrl: "http://192.168.1.180:8001",
+E_ENV_CONFIG: s
+};
 cc._RF.pop();
 }, {} ],
 HotUpdate: [ function(t, e, s) {

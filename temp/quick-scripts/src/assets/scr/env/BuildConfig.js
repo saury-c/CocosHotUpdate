@@ -26,7 +26,7 @@ var E_ENV_CONFIG;
 })(E_ENV_CONFIG = exports.E_ENV_CONFIG || (exports.E_ENV_CONFIG = {}));
 /** 各环境的版本号, 打包时会自己修改 - 这个使用枚举的变量, 放在最顶部!!! 用于正则匹配第一项 */
 exports.PROJECT_VER = (_a = {},
-    _a[E_ENV_CONFIG.DEV] = "1.0.2",
+    _a[E_ENV_CONFIG.DEV] = "1.2.0",
     _a[E_ENV_CONFIG.TEST] = "1.1.1",
     _a[E_ENV_CONFIG.PROD] = "1.0.0",
     _a);

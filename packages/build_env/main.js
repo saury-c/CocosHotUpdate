@@ -5,16 +5,6 @@
  * @Tips: 这些枚举与 BuildConfig.ts 内相对应
  */
 
-// enum - env
-let E_ENV_CONFIG;
-(function (temp) {
-    temp[temp["DEV"] = "DEV"] = "DEV";
-    temp[temp["TEST"] = "TEST"] = "TEST";
-    temp[temp["PROD"] = "PROD"] = "PROD";
-})(E_ENV_CONFIG || (E_ENV_CONFIG = {}));
-
-// enum - 热更url
-const HOT_UPDATE_URL = require("./../../assets/scr/env/HotUpdateUrl");
 
 'use strict';
 
@@ -22,6 +12,9 @@ const path = require('path');
 const fs = require('fs');
 const dayjs = require('./dayjs.js');
 const initVersion = require('./version_generator');
+const temp = require("./../../assets/scr/env/HotUpdateUrl");
+const HOT_UPDATE_URL = temp.HotUpdateUrl;   // 热更url
+const E_ENV_CONFIG = temp.E_ENV_CONFIG;   // 环境枚举
 
 // 项目名, 项目环境, 项目版本
 let proName,

@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/scr/env/BuildConfig":1,"./assets/scr/env/HotUpdate":3,"./assets/scr/env/HotUpdateUrl":2},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/scr/env/BuildConfig.js"},{"deps":{},"path":"preview-scripts/assets/scr/env/HotUpdateUrl.js"},{"deps":{},"path":"preview-scripts/assets/scr/env/HotUpdate.js"}];
+var scripts = [{"deps":{"./assets/scr/env/BuildConfig":1,"./assets/scr/env/HotUpdate":2,"./assets/scr/env/HotUpdateUrl":3},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/scr/env/BuildConfig.js"},{"deps":{},"path":"preview-scripts/assets/scr/env/HotUpdate.js"},{"deps":{},"path":"preview-scripts/assets/scr/env/HotUpdateUrl.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 

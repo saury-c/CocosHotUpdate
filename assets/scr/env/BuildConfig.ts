@@ -9,19 +9,17 @@
  */
 
 
-/** 当前项目开发环境 - 开发过程中, 可以使用本地存储来修改开发环境~ */
-export const PROJECT_ENV = "DEV";
-
 /** 项目所有的生产环境 */
-export enum E_ENV_CONFIG {
-    DEV = "DEV",    // 开发者自己打的包
-    TEST = "TEST",  // 打给测试的包
-    PROD = "PROD",  // 正式包
-}
+export const E_ENV_CONFIG: {
+    DEV: "DEV",    // 开发者自己打的包
+    TEST: "TEST",  // 打给测试的包
+    PROD: "PROD",  // 正式包
+} = require("./HotUpdateUrl").E_ENV_CONFIG;
 
-/** 各环境的版本号, 打包时会自己修改 - 这个使用枚举的变量, 放在最顶部!!! 用于正则匹配第一项 */
-export const PROJECT_VER = {
-    [E_ENV_CONFIG.DEV]: "1.0.2",
+
+/** (热更使用)各环境的版本号, 打包时会自己修改 - 这个使用枚举的变量, 放在最顶部!!! 用于正则匹配第一项 */
+const PROJECT_VER = {
+    [E_ENV_CONFIG.DEV]: "1.2.1",
     [E_ENV_CONFIG.TEST]: "1.1.1",
     [E_ENV_CONFIG.PROD]: "1.0.0",
 }
@@ -39,6 +37,9 @@ const CFG_GAME_JUMP_TO_URL = {
     [E_ENV_CONFIG.TEST]: "https://192.168.1.180:8001/",
     [E_ENV_CONFIG.PROD]: "https://192.168.1.180:8001/",
 }
+
+/** 当前项目开发环境 - 开发过程中, 可以使用本地存储来修改开发环境~ */
+export const PROJECT_ENV = "DEV";
 
 /** http请求url */
 export const ENV_URL = CFG_ENV_URL.DEV;

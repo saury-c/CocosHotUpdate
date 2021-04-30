@@ -5,4 +5,16 @@
  * @Tips: 
  */
 
-module.exports = "http://192.168.1.180:8001/";
+let E_ENV_CONFIG;
+(function (temp) {
+    temp[temp["DEV"] = "DEV"] = "DEV";
+    temp[temp["TEST"] = "TEST"] = "TEST";
+    temp[temp["PROD"] = "PROD"] = "PROD";
+})(E_ENV_CONFIG || (E_ENV_CONFIG = {}));
+
+const HotUpdateUrl = "http://192.168.1.180:8001";
+
+module.exports = {
+    HotUpdateUrl,
+    E_ENV_CONFIG,
+}
