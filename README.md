@@ -25,6 +25,8 @@
 
 ### 构建流程
 
+> 方式一：
+
  - 构建规范
 
     - 构建命名
@@ -43,23 +45,30 @@
 
  - 3 运行项目即可看到热更
 
+```
+  白话解释一遍
+
+ 0 构建模板 build-templates/main.js 插入了一段热更代码
+
+ 0 扩展包主要是用来构建热更版本文件 manifest， 目录： packages/build_env
+
+ 1 构建文件 - 之后会根据 环境 + 版本号 自动生成 manifest， 
+
+ 2 重新构建 （因为 manifest 修改了， 项目的资源需要重新构建来引用这个新的 manifest)
+
+ tips:  这里可以插一个上传资源的步骤， 所有资源放在了 build/jsb-remote-assets
+
+ 3 运行项目会自己调用热更 - 如果需要控制热更流程， 请自行修改 `HotUpdate.ts` 脚本
+```
+
 <br>
 
->  白话解释一遍
+> 方式二：
 
-> 0 构建模板 build-templates/main.js 插入了一段热更代码
+    - 打开构建面板, 填好对应参数
 
-> 0 扩展包主要是用来构建热更版本文件 manifest， 目录： packages/build_env
+    - 运行项目根目录 build.bat 即可. (需要脚本正确使用引擎版本和项目路径)
 
-> 1 构建文件 - 之后会根据 环境 + 版本号 自动生成 manifest， 
-
-> 2 重新构建 （因为 manifest 修改了， 项目的资源需要重新构建来引用这个新的 manifest)
-
-> tips:  这里可以插一个上传资源的步骤， 所有资源放在了 build/jsb-remote-assets
-
-> 3 运行项目会自己调用热更 - 如果需要控制热更流程， 请自行修改 `HotUpdate.ts` 脚本
-
-
-
+    - 参考文档：https://docs.cocos.com/creator/manual/zh/publish/publish-in-command-line.html
 
 
