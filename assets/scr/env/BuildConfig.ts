@@ -19,7 +19,7 @@ export const E_ENV_CONFIG: {
 
 /** (热更使用)各环境的版本号, 打包时会自己修改 - 这个使用枚举的变量, 放在最顶部!!! 用于正则匹配第一项 */
 const PROJECT_VER = {
-    [E_ENV_CONFIG.DEV]: "1.2.1",
+    [E_ENV_CONFIG.DEV]: "1.2.2",
     [E_ENV_CONFIG.TEST]: "1.1.1",
     [E_ENV_CONFIG.PROD]: "1.0.0",
 }

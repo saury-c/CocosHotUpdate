@@ -38,7 +38,7 @@ function onBuildStart(options, callback) {
     // 读取文本
     let configPath = path.join(__dirname, './../../assets/scr/env/BuildConfig.ts');
     var configText = fs.readFileSync(configPath, 'utf8');
-    Editor.log("-------------------未修改前的文本:", configText);
+    // Editor.log("-------------------未修改前的文本:", configText);
     // 修改生产环境
     let arr = configText.match(/export const PROJECT_ENV =.*?;/);
     configText = configText.replace(arr[0], `export const PROJECT_ENV = "${proEnv}";`);
@@ -54,7 +54,7 @@ function onBuildStart(options, callback) {
     configText = configText.replace(arr[0], `export const GAME_JUMP_TO_URL = CFG_GAME_JUMP_TO_URL.${proEnv};`); // 修改生产环境
     // 修改文本
     fs.writeFileSync(configPath, configText);
-    Editor.log("-------------------修改后的文本", configText);
+    // Editor.log("-------------------修改后的文本", configText);
 
     // everything is ok
     callback();

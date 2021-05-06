@@ -33,7 +33,7 @@ value: !0
 });
 s.GAME_JUMP_TO_URL = s.ENV_URL = s.PROJECT_ENV = s.E_ENV_CONFIG = void 0;
 s.E_ENV_CONFIG = t("./HotUpdateUrl").EnvConfig;
-(a = {})[s.E_ENV_CONFIG.DEV] = "1.2.1", a[s.E_ENV_CONFIG.TEST] = "1.1.1", a[s.E_ENV_CONFIG.PROD] = "1.0.0";
+(a = {})[s.E_ENV_CONFIG.DEV] = "1.2.2", a[s.E_ENV_CONFIG.TEST] = "1.1.1", a[s.E_ENV_CONFIG.PROD] = "1.0.0";
 var i = ((o = {})[s.E_ENV_CONFIG.DEV] = "http://192.168.1.180:8001", o[s.E_ENV_CONFIG.TEST] = "http://192.168.1.180:8001", 
 o[s.E_ENV_CONFIG.PROD] = "http://192.168.1.180:8001", o), r = ((n = {})[s.E_ENV_CONFIG.DEV] = "https://192.168.1.180:8001/", 
 n[s.E_ENV_CONFIG.TEST] = "https://192.168.1.180:8001/", n[s.E_ENV_CONFIG.PROD] = "https://192.168.1.180:8001/", 
@@ -260,7 +260,9 @@ console.log("Retry failed Assets...");
 this._am.downloadFailedAssets();
 }
 };
-n([ l(cc.Asset) ], e.prototype, "manifestUrl", void 0);
+n([ l({
+type: cc.Asset
+}) ], e.prototype, "manifestUrl", void 0);
 return n([ r, c ], e);
 }(cc.Component);
 s.default = _;

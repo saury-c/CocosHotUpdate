@@ -19,7 +19,7 @@ exports.GAME_JUMP_TO_URL = exports.ENV_URL = exports.PROJECT_ENV = exports.E_ENV
 exports.E_ENV_CONFIG = require("./HotUpdateUrl").EnvConfig;
 /** (热更使用)各环境的版本号, 打包时会自己修改 - 这个使用枚举的变量, 放在最顶部!!! 用于正则匹配第一项 */
 var PROJECT_VER = (_a = {},
-    _a[exports.E_ENV_CONFIG.DEV] = "1.2.1",
+    _a[exports.E_ENV_CONFIG.DEV] = "1.2.2",
     _a[exports.E_ENV_CONFIG.TEST] = "1.1.1",
     _a[exports.E_ENV_CONFIG.PROD] = "1.0.0",
     _a);

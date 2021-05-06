@@ -256,7 +256,7 @@ var HotUpdate = /** @class */ (function (_super) {
         }
     };
     __decorate([
-        property(cc.Asset)
+        property({ type: cc.Asset })
     ], HotUpdate.prototype, "manifestUrl", void 0);
     HotUpdate = __decorate([
         ccclass,
