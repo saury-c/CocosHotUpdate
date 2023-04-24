@@ -31,7 +31,7 @@
 
     - 构建命名
 
-        - projectname---evn---versionnumber 
+        - projectname---environment---versionnumber 
 
         - 举例：helloWorld---test---1_0_0，  将会构建名字为 helloWorld 的 test 包， 其版本号为 1.0.0
 
